@@ -8,7 +8,6 @@
 let HomeInputs = document.querySelector("input");
 let submitHomeButton = document.getElementById("btn-home")
 
-
 /*
     ## Exemples: 
 let x = document.getElementById('btn');
