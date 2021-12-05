@@ -5,11 +5,156 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- Icons -->
+    <link href="./assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+    <link href="./assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Argon CSS -->
+    <link type="text/css" href="./assets/css/argon.css?v=1.0.0" rel="stylesheet">
+    <script src="./main.js" defer></script>
     <title>TODOS</title>
 </head>
 
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mt-4">
+            <div class="container">
+                <a class="navbar-brand" href="#">TODO-S</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary"
+                    aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-primary">
+                    <div class="navbar-collapse-header">
+                        <div class="row">
+                            <div class="col-6 collapse-brand">
+                                <a href="./index.html">
+                                    <img src="./assets/img/brand/blue.png">
+                                </a>
+                            </div>
+                            <div class="col-6 collapse-close">
+                                <button type="button" class="navbar-toggler" data-toggle="collapse"
+                                    data-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Discover
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbar-primary_dropdown_1" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-primary_dropdown_1">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+
+    <main>
+        <section>
+            <div class="container row mt-5 ">
+                <div class="col-lg-6">
+                    <h4 class="d-block text-uppercase font-weight-bold mb-3">Projects</h4>
+                    <button type="button" class="btn btn-sm btn-primary btn-tooltip">Create</button>
+                    <button type="button" class="btn btn-sm btn-primary btn-tooltip">Search</button>
+                    <button type="button" class="btn btn-sm btn-primary btn-tooltip">Delete</button>
+                    <button type="button" class="btn btn-sm btn-primary btn-tooltip">On
+                        right</button>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="d-block text-uppercase font-weight-bold mb-3">Tasks</h4>
+                    <button type="button" class="btn btn-sm btn-default">On left</button>
+                    <button type="button" class="btn btn-sm btn-default">On top</button>
+                    <button type="button" class="btn btn-sm btn-default">On right</button>
+                    <button type="button" class="btn btn-sm btn-default">On bottom</button>
+                </div>
+                <div class="custom-control custom-control-alternative custom-checkbox">
+                    <input class="custom-control-input" id=" customCheckLogin2" type="checkbox">
+                    <label class="custom-control-label" for=" customCheckLogin2">
+                        <span>IsCheked</span>
+                    </label>
+                </div>
+            </div>
+        </section>
+        <section class="section section-lg pt-lg-0 section-contact-us">
+            <div class="container col-lg-10">
+                <div class="row mt-5">
+                    
+                        <div class="card bg-gradient-secondary shadow">
+                            <div class="card-body p-lg-5">
+                                <h4 class="mb-1">Want to work with us?</h4>
+                                <p class="mt-0">Your project is very important to us.</p>
+                                <div class="form-group mt-5">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-user-run"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Your name" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                        </div>
+                                        <input class="form-control" placeholder="Email address" type="email">
+                                    </div>
+                                </div>
+                                <div class="form-group mb-4">
+                                    <textarea class="form-control form-control-alternative" name="name" rows="4"
+                                        cols="80" placeholder="Type a message..."></textarea>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-default btn-round btn-block btn-lg">Send
+                                        Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <script src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./assets/vendor/popper/popper.min.js"></script>
+    <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="./assets/vendor/headroom/headroom.min.js"></script>
+    <!-- Optional JS -->
+    <script src="./assets/vendor/onscreen/onscreen.min.js"></script>
+    <script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
+    <script src="./assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <!-- Argon JS -->
+    <script src="./assets/js/argon.js?v=1.0.0"></script>
 </body>
 
 </html>
