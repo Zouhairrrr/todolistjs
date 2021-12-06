@@ -19,7 +19,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary mt-4">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
                 <a class="navbar-brand" href="#">TODO-S</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary"
@@ -68,10 +68,72 @@
             </div>
         </nav>
     </header>
-
-
     <main>
-        <section>
+
+        <div class="container">
+            <div class="col-md-12 row mt-5">
+                <div class="col-md-6 pt-lg-0 ">
+                    <div class="form-group">
+                        <input type="text" placeholder="User Name" id="username" class="form-control">
+                        <span id="spans"></span>
+                    </div>
+                    <div class="submit-btn">
+                        <button type="button" id="gobtn" class="btn btn-outline-info">GO!</button>
+                    </div>
+                </div>
+                <div class="col-md-6 pt-lg-0">
+                    <div class="card bg-gradient-secondary shadow">
+                        <div class="card-body p-lg-5">
+                            <button type="button" id="create-project-btn"
+                                class="btn btn-sm btn-primary btn-tooltip">Create New Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <script src="./assets/vendor/jquery/jquery.min.js"></script>
+    <script src="./assets/vendor/popper/popper.min.js"></script>
+    <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="./assets/vendor/headroom/headroom.min.js"></script>
+    <!-- Optional JS -->
+    <script src="./assets/vendor/onscreen/onscreen.min.js"></script>
+    <script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
+    <script src="./assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <!-- Argon JS -->
+    <script src="./assets/js/argon.js?v=1.0.0"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <section>
             <div class="container row mt-5 ">
                 <div class="col-lg-6">
                     <h4 class="d-block text-uppercase font-weight-bold mb-3">Projects</h4>
@@ -89,14 +151,15 @@
                     <button type="button" class="btn btn-sm btn-default">On bottom</button>
                 </div>
                 <div class="custom-control custom-control-alternative custom-checkbox">
-                    <input class="custom-control-input" id=" customCheckLogin2" type="checkbox">
+                    <input class="custom-control-input" id="customCheckLogin2" type="checkbox">
                     <label class="custom-control-label" for=" customCheckLogin2">
                         <span>IsCheked</span>
                     </label>
                 </div>
             </div>
-        </section>
-        <section class="section section-lg pt-lg-0 section-contact-us">
+        </section> -->
+<!-- <section class="section section-lg pt-lg-0 section-contact-us">
+
             <div class="container col-lg-10">
                 <div class="row mt-5">
                     
@@ -109,7 +172,7 @@
                                         <div class="input-group-prepend">
                                             <span class="input-group-text"><i class="ni ni-user-run"></i></span>
                                         </div>
-                                        <input class="form-control" placeholder="Your name" type="text">
+                                        <input class="form-control" placeholder="Your name" type="text" >
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -133,28 +196,4 @@
                     
                 </div>
             </div>
-        </section>
-    </main>
-
-
-
-
-
-
-
-
-
-
-    <script src="./assets/vendor/jquery/jquery.min.js"></script>
-    <script src="./assets/vendor/popper/popper.min.js"></script>
-    <script src="./assets/vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="./assets/vendor/headroom/headroom.min.js"></script>
-    <!-- Optional JS -->
-    <script src="./assets/vendor/onscreen/onscreen.min.js"></script>
-    <script src="./assets/vendor/nouislider/js/nouislider.min.js"></script>
-    <script src="./assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-    <!-- Argon JS -->
-    <script src="./assets/js/argon.js?v=1.0.0"></script>
-</body>
-
-</html>
+        </section> -->

@@ -4,62 +4,94 @@
         ## functions can be overwriten unlike Class you can't 
 
 */
-// definition des variable utilisés ( inputs buttons ...)
-let HomeInputs = document.querySelector("input");
-let submitHomeButton = document.getElementById("btn-home")
+
+/*
+    ==> Class Tasks extend Project
+ 
+id : inputs / buttons
+username :  input 
+gobtn :btn 
+create-project-btn :  btn
+*/
 
 /*
     ## Exemples: 
 let x = document.getElementById('btn');
 
 */
+class Project {
+    constructor(username, projectName, ...tasks) {
+        this.username = username;
+        this.projectName = projectName;
+        this.tasks = tasks;
+    }
+    static getUserName() {
+        let el = document.querySelector('#username');
+
+        let btn = document.querySelector('#gobtn');
+
+        btn.addEventListener('click', (e) => {
+            if (el.value === "") {
+                let msg = document.querySelector('#spans')
+                msg.classList.add('text-danger')
+                msg.innerText = `Please Fill the blanck `;
+                
+            } else {
+                console.log(`its me ${el.value}`)
+               
+            }
+
+        })
+
+
+    }
+}
+Project.getUserName()
+
 
 
 // testing notifs for discords
 // definition of class used [ 'User , 'Tasks', 'Project']
-class Tasks {
+class Tasks extends Project {
 
-    constructor(nameTask, numberOfTasks) {
+    constructor(nameTask, numberOfTasks, isDone, username, projectName, ...tasks) {
+
+        // super() methode is calling the functions and params used in the parent Class Project.
+
+        super(username, projectName, ...tasks)
         this.nameTask = nameTask;
         this.numberOfTasks = numberOfTasks;
+        this.isDone = isDone;
 
     }
 
     Task(el = this.nameTask) {
-        return "bruh this is " + `${el}`;
+        return `bruh this is ${el}`;
     }
 
 
 }
-let m = new Tasks();
-console.log(m.Task('Jhon'))
+// let m = new Tasks();
+// console.log(m.Task('Jhon'))
 
 
 
 
 
-class User {
-    constructor(name) {
-        this.name = name
-    }
-    ShowName(el = this.name) {
+// class User {
+//     constructor(name) {
+//         this.name = name
+//     }
+//     ShowName(el = this.name) {
 
-        return "hello its me " + `${el}`;
-    }
-}
-
-
-let d = new User();
-
-console.log(d.ShowName('Jhon'))
+//         return `hello its me ${el}`;
+//     }
+// }
 
 
+// let d = new User();
 
-class Project {
-    // definition of the attribues 
+// console.log(d.ShowName('Jhon'))
 
 
 
-
-
-}
