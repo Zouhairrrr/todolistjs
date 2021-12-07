@@ -18,74 +18,111 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="#">TODO-S</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-primary"
-                    aria-controls="navbar-primary" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbar-primary">
-                    <div class="navbar-collapse-header">
-                        <div class="row">
-                            <div class="col-6 collapse-brand">
-                                <a href="./index.html">
-                                    <img src="./assets/img/brand/blue.png">
-                                </a>
-                            </div>
-                            <div class="col-6 collapse-close">
-                                <button type="button" class="navbar-toggler" data-toggle="collapse"
-                                    data-target="#navbar-primary" aria-controls="navbar-primary" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="navbar-nav ml-lg-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Discover
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Profile</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="#" id="navbar-primary_dropdown_1" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-primary_dropdown_1">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
     <main>
 
         <div class="container">
             <div class="col-md-12 row mt-5">
-                <div class="col-md-6 pt-lg-0 ">
-                    <div class="form-group">
+                <!-- <div class="col-md-6 pt-lg-0 ">
+                    <div id="user" class="form-group">
                         <input type="text" placeholder="User Name" id="username" class="form-control">
                         <span id="spans"></span>
                     </div>
                     <div class="submit-btn">
                         <button type="button" id="gobtn" class="btn btn-outline-info">GO!</button>
                     </div>
-                </div>
-                <div class="col-md-6 pt-lg-0">
+                </div> -->
+                <div class="col-md-10 pt-lg-0 m-auto">
                     <div class="card bg-gradient-secondary shadow">
                         <div class="card-body p-lg-5">
-                            <button type="button" id="create-project-btn"
-                                class="btn btn-sm btn-primary btn-tooltip">Create New Project</button>
+                            <button type="button" id="create-btn" class="btn btn-sm btn-primary btn-tooltip">
+                                New Project
+                            </button>
+                            <button type="button" id="tag-btn" class="btn btn-sm btn-primary btn-tooltip">Tags</button>
+                            <button type="button" id="" class="btn btn-sm btn-primary btn-tooltip">Plans</button>
+                            <div id="plans-btn" class="card bg-gradient-secondary">
+                                <ul>
+                                    <li><a href=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card m-auto p-lg-5">
+                        <div class="col-md-8" id="parent">
+                            <input type="hidden" id="hidden">
+
+                        </div>
+                        <div id="show" class="col-md-4">
+                            <button type="button" class="btn btn-block btn-default" data-toggle="modal"
+                                data-target="#modal-form">Form</button>
+                            <div class="modal fade" id="modal-form" tabindex="-1" role="dialog"
+                                aria-labelledby="modal-form" aria-hidden="true">
+                                <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-body p-0">
+                                            <div class="card bg-secondary shadow border-0">
+                                                <div class="card-header bg-white pb-5">
+                                                    <div class="text-muted text-center mb-3">
+                                                        <small>Sign in with</small>
+                                                    </div>
+                                                    <div class="btn-wrapper text-center">
+                                                        <a href="#" class="btn btn-neutral btn-icon">
+                                                            <span class="btn-inner--icon">
+                                                                <img src="./assets/img/icons/common/github.svg">
+                                                            </span>
+                                                            <span class="btn-inner--text">Github</span>
+                                                        </a>
+                                                        <a href="#" class="btn btn-neutral btn-icon">
+                                                            <span class="btn-inner--icon">
+                                                                <img src="./assets/img/icons/common/google.svg">
+                                                            </span>
+                                                            <span class="btn-inner--text">Google</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body px-lg-5 py-lg-5">
+                                                    <div class="text-center text-muted mb-4">
+                                                        <small>Or sign in with credentials</small>
+                                                    </div>
+                                                    <form role="form">
+                                                        <div class="form-group mb-3">
+                                                            <div class="input-group input-group-alternative">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i
+                                                                            class="ni ni-email-83"></i></span>
+                                                                    <input class="form-control" placeholder="Email"
+                                                                        type="email">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="input-group input-group-alternative">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text"><i
+                                                                            class="ni ni-lock-circle-open"></i></span>
+                                                                </div>
+                                                                <input class="form-control" placeholder="Password"
+                                                                    type="password">
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="custom-control custom-control-alternative custom-checkbox">
+                                                            <input class="custom-control-input" id=" customCheckLogin"
+                                                                type="checkbox">
+                                                            <label class="custom-control-label" for=" customCheckLogin">
+                                                                <span>Remember me</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <button type="button" class="btn btn-primary my-4">Sign
+                                                                in</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

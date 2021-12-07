@@ -1,49 +1,61 @@
-/*
-    diffrence beetwen Class & function : 
-        ## functions are hoisted Class is not. Very important !
-        ## functions can be overwriten unlike Class you can't 
+let btnCreate = document.querySelector('#create-btn');
+let tagBtn = document.querySelector('#tag-btn');
+// let show = document.querySelector('#show').style.display = "none"
+let planBtn = document.querySelector('#plans-btn')
+let parentDiv = document.querySelector('#parent')
+let bsg = document.createElement('input')
+let submitBtn = document.createElement('button')
+let span = document.createElement('span')
+let firstProject = ""
+let lastProject = ""
+// let firstProject =""
 
-*/
 
-/*
-    ==> Class Tasks extend Project
- 
-id : inputs / buttons
-username :  input 
-gobtn :btn 
-create-project-btn :  btn
-*/
-
-/*
-    ## Exemples: 
-let x = document.getElementById('btn');
-
-*/
 class Project {
-    constructor(username, projectName, ...tasks) {
-        this.username = username;
+    constructor(projectName, ...tasks) {
         this.projectName = projectName;
         this.tasks = tasks;
     }
     static getUserName() {
-        let el = document.querySelector('#username');
+        btnCreate.addEventListener('click', (e) => {
+            e.preventDefault();
+            bsg.placeholder = "Project Name";
+            bsg.classList.add('form-control', 'form-control-alternative')
+            submitBtn.classList.add('btn', 'btn-outline-primary', 'mt-3',)
+            submitBtn.innerText = "Submit";
+            parentDiv.appendChild(bsg);
+            parentDiv.appendChild(submitBtn)
+            submitBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (bsg.value === "") {
+                    span.classList.add('text-danger', 'input-group')
+                    span.innerHTML = "Please Fill the Name";
+                    parentDiv.appendChild(span)
+                } else {
+                    // submitBtn.dataToggle= ""
+                    //remove special caract
 
-        let btn = document.querySelector('#gobtn');
+                    const removeSpecials = (str) => {
+                        var lower = str.toLowerCase();
+                        var upper = str.toUpperCase();
 
-        btn.addEventListener('click', (e) => {
-            if (el.value === "") {
-                let msg = document.querySelector('#spans')
-                msg.classList.add('text-danger')
-                msg.innerText = `Please Fill the blanck `;
-                
-            } else {
-                console.log(`its me ${el.value}`)
-               
-            }
+                        var res = "";
+                        for (var i = 0; i < lower.length; ++i) {
+                            if (lower[i] != upper[i] || lower[i].trim() === '')
+                                res += str[i];
+                        }
+                        return res;
+                    }
 
+                    projectName = removeSpecials(bsg.value)
+                    console.log(projectName)
+                    // localStorage.setItem(firstProject, lastProject)
+
+
+
+                }
+            })
         })
-
-
     }
 }
 Project.getUserName()
@@ -54,14 +66,14 @@ Project.getUserName()
 // definition of class used [ 'User , 'Tasks', 'Project']
 class Tasks extends Project {
 
-    constructor(nameTask, numberOfTasks, isDone, username, projectName, ...tasks) {
+    constructor(nameTask, numberOfTasks, isDone, projectName, ...tasks) {
 
         // super() methode is calling the functions and params used in the parent Class Project.
 
-        super(username, projectName, ...tasks)
+        super( projectName, ...tasks)
         this.nameTask = nameTask;
         this.numberOfTasks = numberOfTasks;
-        this.isDone = isDone;
+        this.isDone = isDone = false;
 
     }
 
@@ -75,6 +87,28 @@ class Tasks extends Project {
 // console.log(m.Task('Jhon'))
 
 
+
+/*
+    diffrence beetwen Class & function :
+        ## functions are hoisted Class is not. Very important !
+        ## functions can be overwriten unlike Class you can't
+
+*/
+
+/*
+    ==> Class Tasks extend Project
+
+id : inputs / buttons
+username :  input
+gobtn :btn
+create-project-btn :  btn
+*/
+
+/*
+    ## Exemples:
+let x = document.getElementById('btn');
+
+*/
 
 
 
@@ -92,6 +126,4 @@ class Tasks extends Project {
 // let d = new User();
 
 // console.log(d.ShowName('Jhon'))
-
-
 
