@@ -37,7 +37,7 @@
                             <button type="button" id="create-btn" class="btn btn-sm btn-primary btn-tooltip">
                                 New Project
                             </button>
-                            <button type="button" id="tag-btn" class="btn btn-sm btn-primary btn-tooltip">Tags</button>
+                            <button type="button" id="tagBtn" class="btn btn-sm btn-primary btn-tooltip">Tags</button>
                             <button type="button" id="" class="btn btn-sm btn-primary btn-tooltip">Plans</button>
                             <!-- <div id="plans-btn" class="card bg-gradient-secondary">
                                 <ul>
@@ -46,13 +46,15 @@
                             </div> -->
                         </div>
                     </div>
+                    <div id="tagNameParent" class="card bg-gradient-secondary shadow">
+                        
+                    </div>
                     <div class="card m-auto p-lg-5">
-                        <div class="col-md-8" id="parent">
+                        <div class="col-md-8" id="parentDanger">
                             <!-- <input type="hidden" id="hidden"> -->
-                            <div id="hideModel" class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <div id="hideModel_" class="alert alert-danger alert-dismissible fade show" role="alert">
                                 <span class="alert-inner--icon"><i class="ni ni-support-16"></i></span>
-                                <span class="alert-inner--text"><strong>Danger!</strong> This is an error alert—check it
-                                    out!</span>
+                                <span class="alert-inner--text"><strong>Danger!</strong>All inputs are required</span>
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -74,7 +76,8 @@
                                                     <div class="form-group mb-3">
                                                         <div class="input-group input-group-alternative">
                                                             <div class="py-lg-2  m-auto">
-                                                                <h1 id="projectNamee" class="text-center text-primary"></h1>
+                                                                <h1 id="projectNamee" class="text-center text-primary">
+                                                                </h1>
                                                                 </h1>
                                                             </div>
                                                         </div>
@@ -110,6 +113,14 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div id="showMsg" class="alert alert-success alert-dismissible fade show" role="alert">
+                            <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
+                            <span class="alert-inner--text"><strong>Attention!</strong>There is No Project yet <a
+                                    href="">Create One Now</a></span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
                     </div>
                 </div>

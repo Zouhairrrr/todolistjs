@@ -186,7 +186,7 @@ blockquote
 {
     margin: 0 0 1rem;
 }
-#hideModel{
+#hideModel_,#tagNameParent,#showMsg{
     display: none;
 }
 

@@ -1,8 +1,9 @@
 document.querySelector('#show').style.display = "none"
 let btnCreate = document.querySelector('#create-btn');
-let tagBtn = document.querySelector('#tag-btn');
+let tagBtn = document.querySelector('#tagBtn');
 let planBtn = document.querySelector('#plans-btn')
-let parentDiv = document.querySelector('#parent')
+let DangerDiv = document.querySelector('#parentDanger')
+let tagParent = document.querySelector('#tagNameParent')
 let PName = document.createElement('input')
 let PTag = document.createElement('input')
 // let abs = document.querySelector('submit-btn').addEventListener('click', (e) => { })
@@ -26,14 +27,17 @@ class Project {
             PTag.classList.add('form-control', 'form-control-alternative', 'mt-3')
             submitBtn.classList.add('btn', 'btn-outline-primary', 'mt-3',)
             submitBtn.innerText = "Submit";
-            parentDiv.appendChild(PName);
-            parentDiv.appendChild(PTag);
-            parentDiv.appendChild(submitBtn)
+            DangerDiv.appendChild(PName);
+            DangerDiv.appendChild(PTag);
+            DangerDiv.appendChild(submitBtn)
             submitBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 if (PName.value === "" || PTag.value === "") {
-                    document.querySelector('#hideModel').style.display = 'block'
-                    return;
+                    let x = document.querySelector('#hideModel_').style.display = 'block';
+                    PName.value = "";
+                    PTag.value = "";
+                    return x;
+
                 } else {
                     const removeSpecials = (str) => {
                         var lower = str.toLowerCase();
@@ -46,16 +50,37 @@ class Project {
                         return res;
                     }
                     this.projectName = removeSpecials(PName.value)
+                    let setItem = localStorage.setItem('key', this.projectName)
+                    // console.log(this.projectName) output is : Project-Name
                     document.querySelector('#show').style.display = 'block'
-                    document.querySelector('#projectNamee').innerHTML = PName.value
-
+                    document.querySelector('#projectNamee').innerHTML = PName.value.toUpperCase()
+                    PName.value = "";
+                    PTag.value = "";
                 }
             })
         })
     }
+    static GetProjectTagNme() {
+
+        tagBtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            if (this.projectName) {
+                tagParent.style.display = 'block'
+                tagParent.innerHTML = this.projectName
+            } else {
+                document.querySelector('#showMsg').style.display = "block"
+
+                
+            }
+            // console.log(this.projectName)
+            // console.log(e)
+            // tagParent.appendChild();
+            // return;
+        })
+    }
 }
 Project.GetProjectDetails()
-
+Project.GetProjectTagNme()
 
 
 // testing notifs for discords
