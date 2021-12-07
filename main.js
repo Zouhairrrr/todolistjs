@@ -3,12 +3,13 @@ let btnCreate = document.querySelector('#create-btn');
 let tagBtn = document.querySelector('#tag-btn');
 let planBtn = document.querySelector('#plans-btn')
 let parentDiv = document.querySelector('#parent')
-let bsg = document.createElement('input')
+let PName = document.createElement('input')
+let PTag = document.createElement('input')
+// let abs = document.querySelector('submit-btn').addEventListener('click', (e) => { })
 let submitBtn = document.createElement('button')
 let span = document.createElement('span')
 let firstProject = ""
 let lastProject = ""
-// let firstProject =""
 
 
 class Project {
@@ -16,23 +17,24 @@ class Project {
         this.projectName = projectName;
         this.tasks = tasks;
     }
-    static getUserName() {
+    static GetProjectDetails() {
         btnCreate.addEventListener('click', (e) => {
             e.preventDefault();
-            bsg.placeholder = "Project Name";
-            bsg.classList.add('form-control', 'form-control-alternative')
+            PName.placeholder = "Project Name"; //this is for the Input Name-Project
+            PName.classList.add('form-control', 'form-control-alternative') //this is for the Input Name-Project
+            PTag.placeholder = "TagName"
+            PTag.classList.add('form-control', 'form-control-alternative', 'mt-3')
             submitBtn.classList.add('btn', 'btn-outline-primary', 'mt-3',)
             submitBtn.innerText = "Submit";
-            parentDiv.appendChild(bsg);
+            parentDiv.appendChild(PName);
+            parentDiv.appendChild(PTag);
             parentDiv.appendChild(submitBtn)
             submitBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                if (bsg.value === "") {
-                    span.classList.add('text-danger', 'input-group')
-                    span.innerHTML = "Please Fill the Name";
-                    parentDiv.appendChild(span)
+                if (PName.value === "" || PTag.value === "") {
+                    document.querySelector('#hideModel').style.display = 'block'
+                    return;
                 } else {
-
                     const removeSpecials = (str) => {
                         var lower = str.toLowerCase();
                         var upper = str.toUpperCase();
@@ -43,14 +45,16 @@ class Project {
                         }
                         return res;
                     }
-                    this.projectName = removeSpecials(bsg.value)
+                    this.projectName = removeSpecials(PName.value)
                     document.querySelector('#show').style.display = 'block'
+                    document.querySelector('#projectNamee').innerHTML = PName.value
+
                 }
             })
         })
     }
 }
-Project.getUserName()
+Project.GetProjectDetails()
 
 
 
