@@ -51,37 +51,18 @@
                             <input type="hidden" id="hidden">
 
                         </div>
-                        <div id="show" class="col-md-4">
+                        <div id="show" class="col-md-4 mt-5">
                             <button type="button" class="btn btn-block btn-default" data-toggle="modal"
-                                data-target="#modal-form">Form</button>
+                                data-target="#modal-form">Create Now</button>
                             <div class="modal fade" id="modal-form" tabindex="-1" role="dialog"
                                 aria-labelledby="modal-form" aria-hidden="true">
                                 <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
                                     <div class="modal-content">
                                         <div class="modal-body p-0">
                                             <div class="card bg-secondary shadow border-0">
-                                                <div class="card-header bg-white pb-5">
-                                                    <div class="text-muted text-center mb-3">
-                                                        <small>Sign in with</small>
-                                                    </div>
-                                                    <div class="btn-wrapper text-center">
-                                                        <a href="#" class="btn btn-neutral btn-icon">
-                                                            <span class="btn-inner--icon">
-                                                                <img src="./assets/img/icons/common/github.svg">
-                                                            </span>
-                                                            <span class="btn-inner--text">Github</span>
-                                                        </a>
-                                                        <a href="#" class="btn btn-neutral btn-icon">
-                                                            <span class="btn-inner--icon">
-                                                                <img src="./assets/img/icons/common/google.svg">
-                                                            </span>
-                                                            <span class="btn-inner--text">Google</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
                                                 <div class="card-body px-lg-5 py-lg-5">
                                                     <div class="text-center text-muted mb-4">
-                                                        <small>Or sign in with credentials</small>
+                                                        <small>Please make sure you fill the blanks </small>
                                                     </div>
                                                     <form role="form">
                                                         <div class="form-group mb-3">
@@ -89,8 +70,9 @@
                                                                 <div class="input-group-prepend">
                                                                     <span class="input-group-text"><i
                                                                             class="ni ni-email-83"></i></span>
-                                                                    <input class="form-control" placeholder="Email"
-                                                                        type="email">
+
+                                                                    <input name="task" class="form-control"
+                                                                        placeholder="Task" type="text">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -100,8 +82,10 @@
                                                                     <span class="input-group-text"><i
                                                                             class="ni ni-lock-circle-open"></i></span>
                                                                 </div>
-                                                                <input class="form-control" placeholder="Password"
-                                                                    type="password">
+
+                                                                <textarea class="form-control" placeholder="Description"
+                                                                    type="text">
+                                                                </textarea>
                                                             </div>
                                                         </div>
                                                         <div

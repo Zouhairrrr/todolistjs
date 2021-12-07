@@ -1,6 +1,6 @@
+document.querySelector('#show').style.display = "none"
 let btnCreate = document.querySelector('#create-btn');
 let tagBtn = document.querySelector('#tag-btn');
-// let show = document.querySelector('#show').style.display = "none"
 let planBtn = document.querySelector('#plans-btn')
 let parentDiv = document.querySelector('#parent')
 let bsg = document.createElement('input')
@@ -32,13 +32,10 @@ class Project {
                     span.innerHTML = "Please Fill the Name";
                     parentDiv.appendChild(span)
                 } else {
-                    // submitBtn.dataToggle= ""
-                    //remove special caract
 
                     const removeSpecials = (str) => {
                         var lower = str.toLowerCase();
                         var upper = str.toUpperCase();
-
                         var res = "";
                         for (var i = 0; i < lower.length; ++i) {
                             if (lower[i] != upper[i] || lower[i].trim() === '')
@@ -46,13 +43,8 @@ class Project {
                         }
                         return res;
                     }
-
-                    projectName = removeSpecials(bsg.value)
-                    console.log(projectName)
-                    // localStorage.setItem(firstProject, lastProject)
-
-
-
+                    this.projectName = removeSpecials(bsg.value)
+                    document.querySelector('#show').style.display = 'block'
                 }
             })
         })
@@ -70,7 +62,7 @@ class Tasks extends Project {
 
         // super() methode is calling the functions and params used in the parent Class Project.
 
-        super( projectName, ...tasks)
+        super(projectName, ...tasks)
         this.nameTask = nameTask;
         this.numberOfTasks = numberOfTasks;
         this.isDone = isDone = false;
