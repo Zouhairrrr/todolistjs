@@ -23,31 +23,34 @@
 
                 <div class="form-group mb-3">
                     <div class="input-group">
-                        <input name="task" class="form-control" placeholder="Task" type="text">
+                        <input name="task" class="form-control" placeholder="ID" type="text">
                     </div>
                 </div>
                 <div class="form-group mb-3">
                     <div class="input-group">
-                        <input name="task" class="form-control" placeholder="Task" type="text">
+                        <input name="task" class="form-control" placeholder="User Name" type="text">
                     </div>
                 </div>
                 <div class="form-group mb-3">
                     <div class="input-group">
-                        <input name="task" class="form-control" placeholder="Task" type="text">
+                        <input name="task" class="form-control" placeholder="Description" type="text">
                     </div>
                 </div>
                 <div class="form-group mb-3">
                     <div class="input-group">
-                        <input name="task" class="form-control" placeholder="Task" type="text">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                      </div>
+                      <input class="form-control ml-1 p-1" placeholder="Start date" type="text" value="08/12/2021">
                     </div>
-                </div>
+                  </div>
                 <div class="form-group mb-3">
                     <div class="input-group d-flex justify-content-center">
                         <button type="button" id="create-btn" class="btn btn-1 btn-neutral">
-                            New Project
+                            Submit
                         </button>
                         <button type="button" id="create-btn" class="btn btn-1 btn-neutral ml-3">
-                            New Project
+                            Cancel
                         </button>
                     </div>
                 </div>
@@ -56,33 +59,20 @@
 
                 <h1 class="display-1 text-center text-primary mt-2">TASKS</h1>
 
+                <h3 class="text-wight text-center"></h3>
+                <h4 class="display-4  text-white text-center">Name Of the project</h4>
                 <div class="form-group mb-3">
                     <div class="input-group">
-                        <input name="task" class="form-control" placeholder="Task" type="text">
-                    </div>
-                </div>
-                <div class="form-group mb-3">
-                    <div class="input-group">
-                        <input name="task" class="form-control" placeholder="Task" type="text">
-                    </div>
-                </div>
-                <div class="form-group mb-3">
-                    <div class="input-group">
-                        <input name="task" class="form-control" placeholder="Task" type="text">
-                    </div>
-                </div>
-                <div class="form-group mb-3">
-                    <div class="input-group">
-                        <input name="task" class="form-control" placeholder="Task" type="text">
+                        <input name="task" class="form-control" placeholder="TODO" type="text">
                     </div>
                 </div>
                 <div class="form-group mb-3">
                     <div class="input-group d-flex justify-content-center">
                         <button type="button" id="create-btn" class="btn btn-1 btn-neutral">
-                            New Project
+                            Save
                         </button>
                         <button type="button" id="create-btn" class="btn btn-1 btn-neutral ml-3">
-                            New Project
+                            Cancel
                         </button>
                     </div>
                 </div>
@@ -90,7 +80,7 @@
 
         </div>
         <div class="">
-            <h1 class="display-2 text-center text-primary mt-5"> DISPLAY OF TASKS</h1>
+            <h1 class="display-2 text-center text-primary mt-5">DISPLAY OF TASKS</h1>
             <div class="mt-5"></div>
             <div class="table-responsive col-md-10 m-auto ">
                 <div>
@@ -101,28 +91,28 @@
                                 <th scope="col" class="sort">Project Name</th>
                                 <th scope="col" class="sort">Tasks</th>
                                 <th scope="col" class="sort">Status</th>
-                                <th scope="col"></th>
+                                <th scope="col" class="sort">Action</th>
                             </tr>
                         </thead>
                         <tbody class="list">
                             <tr>
                                 <th scope="row">
                                     <div class="media align-items-center">
-                                        HELLO
+                                        PR-1
                                     </div>
                                 </th>
-                                <td class="budget">
-                                    $2500 USD
+                                <td class="project_name">
+                                    Projet 1
                                 </td>
                                 <td>
                                     <span class="badge badge-dot mr-4">
                                         <i class="bg-warning"></i>
-                                        <span class="status">pending</span>
+                                        <span class="status">false</span>
                                     </span>
                                 </td>
                                 <td>
                                     <div class="avatar-group">
-                                        qjvoadzciazdop dca
+                                       Not completed
                                     </div>
                                 </td>
                                 <td class="text-right">
@@ -132,8 +122,8 @@
                                             <span class="alert-inner--icon text-primary"><i class="ni ni-support-16"></i></span></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
+                                              <a class="dropdown-item d-flex justify-content-between" href="#">Edit<img src="/assets/img/icons/editing.png" width="17px" height="17px"></a>
+                                            <a class="dropdown-item d-flex justify-content-between" href="#">Delete<img src="/assets/img/icons/delete.png" width="17px" height="17px"></a>
                                         </div>
                                     </div>
                                 </td>
@@ -163,6 +153,7 @@
     <script src="./assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
     <!-- Argon JS -->
     <script src="./assets/js/argon.js?v=1.0.0"></script>
+
 
 </body>
 
