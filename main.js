@@ -11,6 +11,7 @@ let submitBtn = document.createElement('button')
 let span = document.createElement('span')
 let firstProject = ""
 let lastProject = ""
+let allProjects = [];
 
 
 class Project {
@@ -36,7 +37,6 @@ class Project {
                     let x = document.querySelector('#hideModel_').style.display = 'block';
                     PName.value = "";
                     PTag.value = "";
-                    return x;
 
                 } else {
                     const removeSpecials = (str) => {
@@ -50,8 +50,8 @@ class Project {
                         return res;
                     }
                     this.projectName = removeSpecials(PName.value)
-                    let setItem = localStorage.setItem('key', this.projectName)
-                    // console.log(this.projectName) output is : Project-Name
+                    // console.log(this.projectName)
+                    allProjects = localStorage.setItem('2', this.projectName)
                     document.querySelector('#show').style.display = 'block'
                     document.querySelector('#projectNamee').innerHTML = PName.value.toUpperCase()
                     PName.value = "";
@@ -61,36 +61,27 @@ class Project {
         })
     }
     static GetProjectTagNme() {
-
         tagBtn.addEventListener('click', (e) => {
             e.preventDefault()
             if (this.projectName) {
                 tagParent.style.display = 'block'
                 tagParent.innerHTML = this.projectName
             } else {
-                document.querySelector('#showMsg').style.display = "block"
-
-                
+                for (let i = 0; i <= allProjects.length; i++) {
+                    console.log(allProjects[i])
+                }
             }
-            // console.log(this.projectName)
-            // console.log(e)
-            // tagParent.appendChild();
-            // return;
         })
     }
 }
 Project.GetProjectDetails()
 Project.GetProjectTagNme()
 
-
 // testing notifs for discords
 // definition of class used [ 'User , 'Tasks', 'Project']
 class Tasks extends Project {
-
     constructor(nameTask, numberOfTasks, isDone, projectName, ...tasks) {
-
         // super() methode is calling the functions and params used in the parent Class Project.
-
         super(projectName, ...tasks)
         this.nameTask = nameTask;
         this.numberOfTasks = numberOfTasks;
