@@ -12,14 +12,139 @@
     <script src="./main.js" defer></script>
     <title>TODOS</title>
 </head>
+
 <body>
     <main>
 
 
+        <div class="col-md-12 p-lg-5 bg-default row">
+            <div class=" col-md-6">
+                <h1 class="display-1 text-center text-primary mt-2">PROJECT</h1>
 
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <input name="task" class="form-control" placeholder="Task" type="text">
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <input name="task" class="form-control" placeholder="Task" type="text">
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <input name="task" class="form-control" placeholder="Task" type="text">
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <input name="task" class="form-control" placeholder="Task" type="text">
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-group d-flex justify-content-center">
+                        <button type="button" id="create-btn" class="btn btn-1 btn-neutral">
+                            New Project
+                        </button>
+                        <button type="button" id="create-btn" class="btn btn-1 btn-neutral ml-3">
+                            New Project
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
 
+                <h1 class="display-1 text-center text-primary mt-2">TASKS</h1>
 
-        
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <input name="task" class="form-control" placeholder="Task" type="text">
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <input name="task" class="form-control" placeholder="Task" type="text">
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <input name="task" class="form-control" placeholder="Task" type="text">
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-group">
+                        <input name="task" class="form-control" placeholder="Task" type="text">
+                    </div>
+                </div>
+                <div class="form-group mb-3">
+                    <div class="input-group d-flex justify-content-center">
+                        <button type="button" id="create-btn" class="btn btn-1 btn-neutral">
+                            New Project
+                        </button>
+                        <button type="button" id="create-btn" class="btn btn-1 btn-neutral ml-3">
+                            New Project
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="">
+            <h1 class="display-2 text-center text-primary mt-5"> DISPLAY OF TASKS</h1>
+            <div class="mt-5"></div>
+            <div class="table-responsive col-md-10 m-auto ">
+                <div>
+                    <table class="table align-items-center">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col" class="sort">Project ID</th>
+                                <th scope="col" class="sort">Project Name</th>
+                                <th scope="col" class="sort">Tasks</th>
+                                <th scope="col" class="sort">Status</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="list">
+                            <tr>
+                                <th scope="row">
+                                    <div class="media align-items-center">
+                                        HELLO
+                                    </div>
+                                </th>
+                                <td class="budget">
+                                    $2500 USD
+                                </td>
+                                <td>
+                                    <span class="badge badge-dot mr-4">
+                                        <i class="bg-warning"></i>
+                                        <span class="status">pending</span>
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="avatar-group">
+                                        qjvoadzciazdop dca
+                                    </div>
+                                </td>
+                                <td class="text-right">
+                                    <div class="dropdown">
+                                        <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="alert-inner--icon text-primary"><i class="ni ni-support-16"></i></span></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
     </main>
 
 
@@ -142,7 +267,7 @@
                                         </div>
                                         <div class="text-center">
                                             <button type="button" class="btn btn-outline-primary my-4">Save</button>
-                                            <button type="button" class="btn btn-outline-warning my-4">Cancel</button>
+                                            <button type="button" class="btn btn-1 btn-neutral my-4">Cancel</button>
                                         </div>
                                     </form>
                                 </div>
