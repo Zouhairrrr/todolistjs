@@ -28,7 +28,7 @@
                 </div>
                 <div class="form-group mb-3">
                     <div class="input-group">
-                        <input name="task" class="form-control" placeholder="User Name" type="text">
+                        <input name="task" class="form-control" placeholder="Name" type="text">
                     </div>
                 </div>
                 <div class="form-group mb-3">
@@ -38,17 +38,18 @@
                 </div>
                 <div class="form-group mb-3">
                     <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
-                      </div>
-                      <input class="form-control ml-1 p-1" placeholder="Start date" type="text" value="08/12/2021">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                        </div>
+                        <input class="form-control ml-1 p-1" placeholder="Start date" type="text" value="08/12/2021">
                     </div>
-                  </div>
+                </div>
                 <div class="form-group mb-3">
                     <div class="input-group d-flex justify-content-center">
                         <button type="button" id="create-btn" class="btn btn-1 btn-neutral">
                             Submit
                         </button>
+
                         <button type="button" id="create-btn" class="btn btn-1 btn-neutral ml-3">
                             Cancel
                         </button>
@@ -60,10 +61,17 @@
                 <h1 class="display-1 text-center text-primary mt-2">TASKS</h1>
 
                 <h3 class="text-wight text-center"></h3>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
+                    <span class="alert-inner--text"><strong>Success!</strong> task updated!</span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
                 <h4 class="display-4  text-white text-center">Name Of the project</h4>
                 <div class="form-group mb-3">
                     <div class="input-group">
-                        <input name="task" class="form-control" placeholder="TODO" type="text">
+                        <input name="task" class="form-control" placeholder="Project" type="text">
                     </div>
                 </div>
                 <div class="form-group mb-3">
@@ -71,9 +79,46 @@
                         <button type="button" id="create-btn" class="btn btn-1 btn-neutral">
                             Save
                         </button>
-                        <button type="button" id="create-btn" class="btn btn-1 btn-neutral ml-3">
+                        <button type="button" id="create-btn" class="btn btn-1 btn-neutral ml-1" data-toggle="modal"
+                            data-target="#exampleModal">
+                            View
+                        </button>
+                        <button type="button" id="create-btn" class="btn btn-1 btn-neutral ml-1">
                             Cancel
                         </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-center" id="exampleModalLabel">name of the project</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex-row justify-content-between align-items-center">
+                                    
+                                        <div class="input-group-prepend">
+                                            <input type="text" class="form-control" aria-label="Text input with checkbox" value="Lorem ipsum dolor sit amet," disabled>
+                                            <div class="input-group-text ">
+                                              <input type="checkbox" aria-label="Checkbox for following text input">
+                                            </div>
+                                        </div>
+                                      
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,18 +157,21 @@
                                 </td>
                                 <td>
                                     <div class="avatar-group">
-                                       Not completed
+                                        Not completed
                                     </div>
                                 </td>
                                 <td class="text-right">
                                     <div class="dropdown">
                                         <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="alert-inner--icon text-primary"><i class="ni ni-support-16"></i></span></i>
+                                            <span class="alert-inner--icon text-primary"><i
+                                                    class="ni ni-support-16"></i></span></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                              <a class="dropdown-item d-flex justify-content-between" href="#">Edit<img src="/assets/img/icons/editing.png" width="17px" height="17px"></a>
-                                            <a class="dropdown-item d-flex justify-content-between" href="#">Delete<img src="/assets/img/icons/delete.png" width="17px" height="17px"></a>
+                                            <a class="dropdown-item d-flex justify-content-between" href="#">Edit<img
+                                                    src="/assets/img/icons/editing.png" width="17px" height="17px"></a>
+                                            <a class="dropdown-item d-flex justify-content-between" href="#">Delete<img
+                                                    src="/assets/img/icons/delete.png" width="17px" height="17px"></a>
                                         </div>
                                     </div>
                                 </td>
