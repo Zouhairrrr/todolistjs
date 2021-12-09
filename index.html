@@ -18,10 +18,12 @@
         <div class="col-md-12 p-lg-5 bg-default row">
             <div class=" col-md-6">
                 <h1 class="display-1 text-center text-primary mt-2">PROJECT</h1>
-
                 <div class="form-group mb-3">
                     <div class="input-group">
-                        <input name="task" class="form-control" placeholder="ID" type="text">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="font-size: 12px;">PR-</span>
+                        </div>
+                        <input name="task" class="form-control p-1" placeholder="ID" type="text">
                     </div>
                 </div>
                 <div class="form-group mb-3">
@@ -47,7 +49,6 @@
                         <button type="button" id="create-btn" class="btn btn-1 btn-neutral">
                             Submit
                         </button>
-
                         <button type="button" id="create-btn" class="btn btn-1 btn-neutral ml-3">
                             Cancel
                         </button>
@@ -55,9 +56,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-
                 <h1 class="display-1 text-center text-primary mt-2">TASKS</h1>
-
                 <h3 class="text-wight text-center"></h3>
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
@@ -88,7 +87,6 @@
                 </div>
             </div>
 
-
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -108,8 +106,7 @@
                                             <div class="input-group-text ">
                                               <input type="checkbox" aria-label="Checkbox for following text input">
                                             </div>
-                                        </div>
-                                      
+                                        </div>           
 
                                 </li>
                             </ul>
