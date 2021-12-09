@@ -1,14 +1,8 @@
 
 
 
-class Stores {
-    constructor() {
-        this.localStore = window.localStorage
-    }
-    setEl(key, value) {
-        return this.localStore.setItem(key, value)
-    }
-    
-   
+export default class Stores {
+    setEl = (key, value) => localStore.setItem(key, JSON.stringify(value))
+    getEl = (key) => JSON.parse(localStorage.getItem(key))
 }
 let Store = new Stores();
