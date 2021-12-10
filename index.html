@@ -33,7 +33,7 @@
                 </div>
                 <div class="form-group mb-3">
                     <div class="input-group">
-                        <input name="task" class="form-control" placeholder="Description" type="text">
+                        <textarea name="task" class="form-control" placeholder="Description" type="text"cols="30" rows="5"></textarea>
                     </div>
                 </div>
                 <div class="form-group mb-3">
@@ -100,26 +100,23 @@
                         <div class="modal-body">
                             <ul class="list-group">
                                 <li class="list-group-item d-flex-row justify-content-between align-items-center">
-                                    <!-- <div class="input-group-prepend">
-                                        <input type="text" class="form-control" aria-label="Text input with checkbox"
-                                            value="Lorem ipsum dolor sit amet," disabled>
-                                        <div class="input-group-text ">
-                                            <input type="checkbox" aria-label="Checkbox for following text input">
-                                        </div>
-                        </div>
-                        -->
+                                    
+                                    <div class=" d-flex justify-content-between" role="alert">
+                                        <button type="button"  class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">×</span>
+                                         </button>
+                                         <div class="">
+                                             <span class="alert-inner--icon"><i class="ni ni-single-copy-04"></i></span>
+                                             <span class="alert-inner--text ml-1">Lorem ipsum dolor sit amet,</span>
+                                            </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="" id="customCheck1" type="checkbox" style="width: 18px;
+                        height: 18px;">
 
-                                    <div class="alert alert-info d-flex justify-content-around" role="alert">
+</div>
 
-                                        <span class="alert-inner--icon"><i class="ni ni-single-copy-04"></i></span>
-                                        <span class="alert-inner--text">Lorem ipsum dolor sit amet,</span>
-                                        <div class="custom-control custom-checkbox">
-                                            <input class="" id="customCheck1" type="checkbox" style="width: 20px;
-                        height: 20px;">
+</div>
 
-                                        </div>
-
-                                    </div>
                                 </li>
                             </ul>
                         </div>

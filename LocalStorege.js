@@ -4,7 +4,13 @@ export default class Stores {
     // gettProjects =
     deleteProject = (key) => localStorage.removeItem(key);
 
+<<<<<<< HEAD
     deleteTask = (projectId, TaskId) => {
+=======
+
+    deleteTask=(projectId,TaskId)=>{
+       
+>>>>>>> eb6253bae0d5e8e8779b2afca1c8f61a6cd5faff
         let project = JSON.parse(localStorage.getItem(projectId));
         let Task = project.task
         Task.forEach(element => {
