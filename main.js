@@ -29,13 +29,13 @@ function setIn() {
         ]
     })
 }
-storage.deleteTask(1, 3);
+storage.deleteTask(1, 2);
 
 // function del() {
 //     storage.deleteTask(1, 2)
 // }
 // del();
-// setIn();
+setIn();
 // storage.deleteProject(1)
 // console.log(storage.getProject(1))
 // console.log(storage.getProject(1));
