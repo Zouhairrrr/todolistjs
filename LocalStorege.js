@@ -1,21 +1,18 @@
 export default class Stores {
-    static addProject  = (obj) => localStorage.setItem(obj.id, JSON.stringify(obj));
-    static getProject = (key) => JSON.parse(localStorage.getItem(key));
+    addProject = (obj) => localStorage.setItem(obj.id, JSON.stringify(obj));
+    getProject = (key) => JSON.parse(localStorage.getItem(key));
     // gettProjects =
-    static deleteProject =(key) => localStorage.removeItem(key);
+    deleteProject = (key) => localStorage.removeItem(key);
 
-    deleteTask=(projectId,TaskId)=>{
-       
+    deleteTask = (projectId, TaskId) => {
         let project = JSON.parse(localStorage.getItem(projectId));
-        let Task = project.Task
-        array.forEach(element => {
-            if(element.id == TaskId){
+        let Task = project.task
+        Task.forEach(element => {
+            if (element.id == TaskId) {
                 console.log(element.name)
-                element.remove();
+                // element.remove();
             }
-            
         });
-        localStorage.setItem(projectId, JSON.stringify(project));
     }
-    
+
 }

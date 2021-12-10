@@ -29,8 +29,6 @@ export default class ButtonsEvents {
     }
 }
 
-
-
 // let Button = new ButtonsEvents()
 // Button.SubmitBtn("#submitHome");
 // Button.CancelBtn("#cancelHome");
