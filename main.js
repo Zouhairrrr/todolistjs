@@ -9,16 +9,23 @@ let buttons = new ButtonsEvents()
 
 // console.log('arrect :>> ', selector.getElbyID(""));
 class Master {
+        //    constructor(id, name, desc, tasks) {
+        //     this.id = selector.querySelc('#pr-id').value
+        //     this.name = selector.querySelc('#pr-name').value
+        //     this.desc = selector.querySelc('#pr-desc').value
+        //     this.tasks = selector.querySelc('#task-name').value
+        //    }
+        Whatever = (id) => {
+            buttons.SubmitBtn(id)
+            buttons.SaveBtn(id)
 
-    Whatever = (id) => {
-        if (buttons.SubmitBtn(id)) {
-            const x = function () {
-                console.log('azert')
-            }
-        }
-        
+
     }
 }
 // setIn();
 let b = new Master()
+b.Whatever("#saveTask")
 b.Whatever("#submitHome")
+
+// buttons.SubmitBtn("#submitHome")
+

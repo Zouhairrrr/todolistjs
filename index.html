@@ -44,7 +44,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                         </div>
-                        <input class="form-control ml-1 p-1 datepicker" placeholder="Start date">
+                        <input class="form-control ml-1 p-1 datepicker" id="pr-date" placeholder="Start date">
                     </div>
                 </div>
                 <div class="form-group mb-3">
@@ -61,9 +61,9 @@
             <div class="col-md-6">
                 <h1 class="display-1 text-center text-primary mt-2">TASKS</h1>
                 <h3 class="text-wight text-center"></h3>
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <div  id="Hide" class="alert alert-danger alert-dismissible fade show" role="alert">
                     <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
-                    <span class="alert-inner--text"><strong>Success!</strong> task updated!</span>
+                    <span class="alert-inner--text"><strong>Attention!</strong>  ID or Name Are Empty check them Please </span>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
@@ -73,6 +73,7 @@
                     <div class="input-group">
                         <input id="task-id" type="hidden">
                         <input id="task-name" name="task" class="form-control" placeholder="Project" type="text">
+                       <div id="ppp"></div>
                     </div>
                 </div>
                 <div class="form-group mb-3">
