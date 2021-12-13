@@ -1,9 +1,8 @@
 export default class Stores {
     addProject = (obj) => localStorage.setItem(obj.id, JSON.stringify(obj));
     getProject = (key) => JSON.parse(localStorage.getItem(key));
-    // gettProjects =
-    deleteProject = (key) => localStorage.removeItem(key);
 
+    deleteProject = (key) => localStorage.removeItem(key);
     // deleteTask = (projectId, TaskId) => {
     //     let project = JSON.parse(localStorage.getItem(projectId));
     //     let Task = project.task

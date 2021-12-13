@@ -1,40 +1,24 @@
 import ButtonsEvents from "./Buttons.js";
 import Stores from "./LocalStorege.js";
 import Selector from "./Selector.js";
+import ValidateForm from "./Validate.js";
+let validate = new ValidateForm()
 let storage = new Stores()
 let selector = new Selector()
-let ButtonsEvent = new ButtonsEvents()
+let buttons = new ButtonsEvents()
 
-// console.log('object :>> ', selector.getElbyID(""));
+// console.log('arrect :>> ', selector.getElbyID(""));
+class Master {
 
-function setIn() {
-    return storage.addProject(
-        {
-            id: selector.getElbyID('pr-id'),
-            name: selector.getElbyID('pr-name'),
-            desc: selector.getElbyID('pr-id'),
-            task: [
-                {
-                    id: 1,
-                    name: "taskName",
-                    isCheked: selector.getElbyID('box')
-                }
-            ]
-        })
+    Whatever = (id) => {
+        if (buttons.SubmitBtn(id)) {
+            const x = function () {
+                console.log('azert')
+            }
+        }
+        
+    }
 }
-storage.deleteTask(1, 2);
-
-// function del() {
-//     storage.deleteTask(1, 2)
-// }
-// del();
-setIn();
-// storage.deleteProject(1)
-// console.log(storage.getProject(1))
-// console.log(storage.getProject(1));
-// Abcd()
-// let Button = new ButtonsEvents()
-// la7ya.CancelBtn('.cancel-btn')
-// ButtonsEvent.SubmitBtn("#submitHome");
-// ButtonsEvent.CancelBtn("#cancelHome");
-// ButtonsEvent.SaveBtn("#saveTask");
+// setIn();
+let b = new Master()
+b.Whatever("#submitHome")

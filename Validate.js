@@ -1,19 +1,21 @@
 import Selector from "./Selector.js";
 let selector = new Selector()
 
+export default class ValidateForm {
 
-// class ValidateForm{
-//     ValidateFormHome(inp1 = null,inp2,inp3,date){
-//         if(inp1===""|| inp2===""||inp3 ===""||date===""){
-//         console.log("its empty please fill blanks");
-//         }
-//     }
-// }
-class Project {
-
-    static id
-
-
-
+    constructor(id, name, desc, date, tasks = []) {
+        this.id = selector.querySelc('#pr-id')
+        this.name = selector.querySelc('#pr-name')
+        this.desc = selector.querySelc('#pr-desc')
+        this.date = new Date()
+        this.tasks = selector.querySelc('#task-name')
+    }
+    validate = () => {
+        if (this.id === "" || this.name === "") {
+            console.log('error')
+        }
+    }
 }
-let x = new Project()
+
+
+
