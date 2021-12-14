@@ -13,7 +13,6 @@ export default class ValidateForm {
     }
     return true;
   };
-
   clearInputs = (id) => {
     // console.log("inside clear : " + id)
     return selector.querySelc(id).value = "";
