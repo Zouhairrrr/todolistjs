@@ -7,16 +7,16 @@ export default class ValidateForm {
   validate = (id) => {
     let m = selector.querySelc(id);
     if (m.value === "") {
-      // let x = selector.getElbyID("Hide");
-      // x.style.display = "block";
-      // return false
+      let x = selector.querySelc("#hideModel_");
+      x.style.display = "block";
+      return false
     }
     return true;
   };
 
   clearInputs = (id) => {
     // console.log("inside clear : " + id)
-    return selector.getElbyID(id).value = "";
+    return selector.querySelc(id).value = "";
   }
   // show=(id)=>{
   //    selector.querySelc(id).style.display= "block"

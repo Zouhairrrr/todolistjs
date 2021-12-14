@@ -12,33 +12,37 @@ let buttons = new ButtonsEvents();
 let display = new Display();
 
 selector.querySelc("#submitHome").addEventListener("click", (e) => {
-  e.preventDefault();
-  const id = selector.querySelc("#pr-id").value;
-  const name = selector.querySelc("#pr-name").value;
-  const desc = selector.querySelc("#pr-desc").value;
-  const date = selector.querySelc("#pr-date").value;
-  if (!validate.validate("#pr-id") || !validate.validate("#pr-name")) return;
-  storage.addProject(new Project(id, name, desc, date));
-  let c = selector.querySelc("#dd");
-  c.style.display = "block";
-  selector.querySelc("#showName").innerHTML = name;
-  selector.querySelc("#id_t").innerHTML = id;
-  selector.querySelc("#name_t").innerHTML = name;
+    e.preventDefault();
+    const id = selector.querySelc("#pr-id").value;
+    const name = selector.querySelc("#pr-name").value;
+    const desc = selector.querySelc("#pr-desc").value;
+    const date = selector.querySelc("#pr-date").value;
+    if (!validate.validate("#pr-id") || !validate.validate("#pr-name")) return;
+    storage.addProject(new Project(id, name, desc, date));
+    let c = selector.querySelc("#dd");
+    c.style.display = "block";
+    validate.clearInputs("#pr-id")
+    validate.clearInputs("#task-id")
+    validate.clearInputs("#pr-name")
+    validate.clearInputs("#pr-desc")
 });
 
 selector.querySelc("#saveTask").addEventListener("click", (e) => {
-  e.preventDefault();
-  const id = selector.querySelc("#pr-id").value;
-  const id_ = selector.querySelc("#task-id").value;
-  const taskName = selector.querySelc("#task-name").value;
-  if (!validate.validate("#task-name")) return;
-  let be = storage.getProject(id);
-  be.Tasks.push(taskName);
-  be.Tasks.push(id_);
-  storage.addProject(be);
-  console.log("success");
-  // storage.addProject( Project.)
-  // console.log(storage.getProject(id))
+    e.preventDefault();
+    const id = selector.querySelc("#pr-id").value;
+    const id_ = selector.querySelc("#task-id").value;
+    const taskName = selector.querySelc("#task-name").value;
+    if (!validate.validate("#task-name")) return;
+    let be = storage.getProject(id);
+    be.Tasks.push(taskName);
+    be.Tasks.push(id_);
+    storage.addProject(be);
+    console.log("success");
+    validate.clearInputs("#task-name")
+   
+
+    // storage.addProject( Project.)
+    // console.log(storage.getProject(id))
 });
 
 // let b = new Master()

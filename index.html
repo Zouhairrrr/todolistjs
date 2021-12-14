@@ -123,7 +123,13 @@
                 </div>
             </div>
 
-
+            <div id="hideModel_" class="alert alert-danger alert-dismissible fade show" role="alert">
+                <span class="alert-inner--icon"><i class="ni ni-support-16"></i></span>
+                <span class="alert-inner--text"><strong>Danger!</strong>All inputs are required</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
         </div>
         <div class="">
             <h1 class="display-2 text-center text-primary mt-5">DISPLAY OF TASKS</h1>
@@ -141,23 +147,8 @@
                             </tr>
                         </thead>
                         <tbody class="list">
-                            <tr>
-                                <th scope="row">
-                                    <div  id="id_t" class="media align-items-center">
-                                    </div>
-                                </th>
-                                <td id="name_t" class="project_name">
-                                </td>
-                                <td>
-                                    <span class="badge badge-dot mr-4">
-                                        <i class="bg-warning"></i>
-                                        <span id="task_t" class="status"></span>
-                                    </span>
-                                </td>
-                                <td>
-                                    <div id="status_t" class="avatar-group">
-                                    </div>
-                                </td>
+                            <tr id="tableau">
+
                                 <td class="text-right">
                                     <div class="dropdown">
                                         <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
