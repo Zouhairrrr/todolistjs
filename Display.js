@@ -62,9 +62,6 @@ export default class Display {
           </td>
       </tr>`
 
-
-
-
       let key = ""
 
       let i = 0;
