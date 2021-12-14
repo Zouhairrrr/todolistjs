@@ -84,6 +84,7 @@ export default class Display {
       alert('Cannot store shopping list as your browser do not support local storage');
     }
   }
+
 }
 /*
  * Checking the browser compatibility.
