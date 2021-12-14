@@ -40,15 +40,41 @@ export default class Display {
               </div>
           </td>
       </tr>`
+      const HeadEmpt = () => `
+      <tr>
+          <td scope="row">
+              <div class="media align-items-center">
+             Empty
+              </div>
+          </td>
+          <td  class="project_name">
+         Empty
+          </td>
+          <td>
+              <div class="status">
+              Empty
+              </div>
+          </td>
+          <td>
+              <div class="media align-items-center">
+              Empty
+              </div>
+          </td>
+      </tr>`
+
+
+
 
       let key = ""
+
       let i = 0;
+
+
+
       if (localStorage.length == 0) {
-        // list += "<tr><td><i>empty</i></td>\n<td><i>empty</i></td><td><i>empty</i></td></tr>\n";
-        id.innerHTML = "empty"
-        name.innerHTML = "empty"
-        task.innerHTML = "empty"
-        Status.innerHTML = "empty"
+        selector.querySelc(".list").innerHTML = "";
+        selector.querySelc(".list").innerHTML += HeadEmpt();
+
       }
       else {
         selector.querySelc("#tableau").innerHTML = ''

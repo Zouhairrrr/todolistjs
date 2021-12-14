@@ -21,7 +21,7 @@ selector.querySelc("#submitHome").addEventListener("click", (e) => {
     storage.addProject(new Project(id, name, desc, date));
     let c = selector.querySelc("#dd");
     c.style.display = "block";
-    validate.clearInputs("#pr-id")
+    // validate.clearInputs("#pr-id")
     validate.clearInputs("#task-id")
     validate.clearInputs("#pr-name")
     validate.clearInputs("#pr-desc")
@@ -32,17 +32,15 @@ selector.querySelc("#saveTask").addEventListener("click", (e) => {
     const id = selector.querySelc("#pr-id").value;
     const id_ = selector.querySelc("#task-id").value;
     const taskName = selector.querySelc("#task-name").value;
-    if (!validate.validate("#task-name")) return;
+    // if (!validate.validate("#task-name")) return;
+    validate.clearInputs("#task-name")
     let be = storage.getProject(id);
+    console.log(be)
     be.Tasks.push(taskName);
     be.Tasks.push(id_);
     storage.addProject(be);
     console.log("success");
-    validate.clearInputs("#task-name")
    
-
-    // storage.addProject( Project.)
-    // console.log(storage.getProject(id))
 });
 
 // let b = new Master()
