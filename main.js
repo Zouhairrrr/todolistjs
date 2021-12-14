@@ -25,6 +25,7 @@ selector.querySelc("#submitHome").addEventListener("click", (e) => {
     validate.clearInputs("#task-id")
     validate.clearInputs("#pr-name")
     validate.clearInputs("#pr-desc")
+    validate.clearInputs("#pr-date")
 });
 
 selector.querySelc("#saveTask").addEventListener("click", (e) => {
@@ -40,8 +41,16 @@ selector.querySelc("#saveTask").addEventListener("click", (e) => {
     be.Tasks.unshift(id_);
     storage.addProject(be);
     console.log("success");
-   
+
 });
+
+selector.querySelc("cancel-home").addEventListener('click', (e) => {
+    e.preventDefault()
+    validate.clearInputs("#task-id")
+    validate.clearInputs("#pr-name")
+    validate.clearInputs("#pr-desc")
+    validate.clearInputs("#pr-date")
+})
 
 // let b = new Master()
 // b.Whatever()
