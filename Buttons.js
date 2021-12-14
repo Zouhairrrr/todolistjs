@@ -39,6 +39,7 @@ export default class ButtonsEvents {
         saveBtn.addEventListener("click", (e) => {
             e.preventDefault();
             validate.validate("#task-name");
+            
         });
     };
 }

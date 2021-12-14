@@ -7,9 +7,9 @@ export default class ValidateForm {
   validate = (id) => {
     let m = selector.querySelc(id);
     if (m.value === "") {
-      let x = selector.getElbyID("Hide");
-      x.style.display = "block";
-      return false
+      // let x = selector.getElbyID("Hide");
+      // x.style.display = "block";
+      // return false
     }
     return true;
   };
