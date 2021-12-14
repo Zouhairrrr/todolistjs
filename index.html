@@ -23,7 +23,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" style="font-size: 12px;">PR-</span>
                         </div>
-                        <input name="task" class="form-control ml-1 p-1" placeholder="ID" id="pr-id" type="text">
+                        <input name="task" class=" form-control ml-1 p-1" placeholder="ID" id="pr-id" type="text">
                     </div>
                 </div>
                 <div class="form-group mb-3">
@@ -33,10 +33,8 @@
                 </div>
                 <div class="form-group mb-3">
                     <div class="input-group">
-                        <textarea name="task" 
-                        id="pr-desc"
-                        class="form-control" placeholder="Description" type="text" cols="30"
-                            rows="5"></textarea>
+                        <textarea name="task" id="pr-desc" class=" form-control" placeholder="Description" type="text"
+                            cols="30" rows="5"></textarea>
                     </div>
                 </div>
                 <div class="form-group mb-3">
@@ -44,7 +42,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
                         </div>
-                        <input class="form-control ml-1 p-1 datepicker" id="pr-date" placeholder="Start date">
+                        <input class=" form-control ml-1 p-1 datepicker" id="pr-date" placeholder="Start date">
                     </div>
                 </div>
                 <div class="form-group mb-3">
@@ -58,22 +56,15 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div id="dd" class="col-md-6">
                 <h1 class="display-1 text-center text-primary mt-2">TASKS</h1>
                 <h3 class="text-wight text-center"></h3>
-                <div  id="Hide" class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
-                    <span class="alert-inner--text"><strong>Attention!</strong>  ID or Name Are Empty check them Please </span>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <h4 class="display-4  text-white text-center">Name Of the project</h4>
+                Project : <h4 id="showName" class="display-4  text-white text-center"></h4>
                 <div class="form-group mb-3">
                     <div class="input-group">
                         <input id="task-id" type="hidden">
                         <input id="task-name" name="task" class="form-control" placeholder="Project" type="text">
-                       <div id="ppp"></div>
+                        <div id="ppp"></div>
                     </div>
                 </div>
                 <div class="form-group mb-3">

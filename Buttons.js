@@ -10,25 +10,26 @@ let selector = new Selector();
 // console.log('object :>> ', selector.getElbyID(""));
 
 export default class ButtonsEvents {
-    SubmitBtn = (_id) => {
-        const submitBtn = selector.querySelc(_id);
-        submitBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            let val = validate.validate("#pr-id");
-            let val1 = validate.validate("#pr-name");
-            // val.value = ""
-            // val1.value = ""
-        });
-    };
+    // SubmitBtn = (_id) => {
+    //     const submitBtn = selector.querySelc(_id);
+    //     submitBtn.addEventListener("click", (e) => {
+    //         e.preventDefault();
+    //         if(!validate.validate("#pr-id") || !validate.validate("#pr-name")) return
+
+    //         let c = selector.querySelc("#dd")
+    //         c.style.display = "block"
+
+    //     });
+    //     return;
+    // };
 
     CancelBtn = (_id) => {
         const cancelBtn = selector.querySelc(_id);
         cancelBtn.addEventListener("click", (e) => {
             e.preventDefault();
-            let j = validate.validate("#cancel-home");
-            let m = validate.validate("#cancel-task");
-            // j.value = "";
-            // m.value = "";
+            validate.validate("#cancel-home");
+            validate.validate("#cancel-task");
+
         });
     };
 
@@ -37,7 +38,7 @@ export default class ButtonsEvents {
         const saveBtn = selector.querySelc(_id);
         saveBtn.addEventListener("click", (e) => {
             e.preventDefault();
-            let j = validate.validate("#task-name");
+            validate.validate("#task-name");
         });
     };
 }
