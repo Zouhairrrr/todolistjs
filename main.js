@@ -36,8 +36,8 @@ selector.querySelc("#saveTask").addEventListener("click", (e) => {
     validate.clearInputs("#task-name")
     let be = storage.getProject(id);
     console.log(be)
-    be.Tasks.push(taskName);
-    be.Tasks.push(id_);
+    be.Tasks.unshift(taskName);
+    be.Tasks.unshift(id_);
     storage.addProject(be);
     console.log("success");
    
