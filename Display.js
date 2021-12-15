@@ -2,6 +2,7 @@ import Stores from "./LocalStorege.js";
 import Selector from "./Selector.js";
 const selector = new Selector();
 const storage = new Stores()
+// pure funtions 
 
 
 export default class Display {
@@ -15,17 +16,11 @@ export default class Display {
   };
   Display_a = () => {
     if (this.CheckBrowser()) {
-      const id = selector.querySelc('#id_t')
-      const name = selector.querySelc('#name_t')
-      const task = selector.querySelc('#task_t')
-      const Status = selector.querySelc('#status_t')
+
+      let key = ""
+      let i = 0;
       const head = (data) => `
       <tr>
-          <td scope="row">
-              <div class="media align-items-center">
-              ${data.id}
-              </div>
-          </td>
           <td  class="project_name">
           ${data.title}
           </td>
@@ -42,11 +37,6 @@ export default class Display {
       </tr>`
       const HeadEmpt = () => `
       <tr>
-          <td scope="row">
-              <div class="media align-items-center">
-             Empty
-              </div>
-          </td>
           <td  class="project_name">
          Empty
           </td>
@@ -61,15 +51,9 @@ export default class Display {
               </div>
           </td>
       </tr>`
-
-      let key = ""
-
-      let i = 0;
-
       if (localStorage.length == 0) {
         selector.querySelc(".list").innerHTML = "";
         selector.querySelc(".list").innerHTML += HeadEmpt();
-
       }
       else {
         selector.querySelc("#tableau").innerHTML = ''
@@ -84,7 +68,6 @@ export default class Display {
       alert('Cannot store shopping list as your browser do not support local storage');
     }
   }
-
 }
 /*
  * Checking the browser compatibility.
